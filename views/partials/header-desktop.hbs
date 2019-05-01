@@ -1,0 +1,25 @@
+<div id="ehb-header-desktop" class="uk-visible@s">
+  <div class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+    <div class="uk-navbar-left">
+      <i class="mdi mdi-24px mdi-{{default config.system.icon "shape-plus"}}"></i>
+      <h1 class="ehb-title uk-visible@s">{{config.system.title}}</h1>
+    </div>
+    <div class="uk-navbar-center"></div>
+    <div class="uk-navbar-right">
+      <ul class="uk-navbar-nav">
+        <li>
+          <i class="uk-icon-link mdi mdi-24px mdi-light mdi-account"></i>
+          <div uk-dropdown="pos: bottom-right">
+            {{> header-account-dropdown}}
+          </div>
+        </li>
+        <li>
+          <i class="uk-icon-link mdi mdi-24px mdi-light mdi-settings"></i>
+          <div uk-dropdown="pos: bottom-right">
+            {{> header-settings-dropdown}}
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

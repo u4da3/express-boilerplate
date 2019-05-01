@@ -1,0 +1,24 @@
+<ul id="ehb-sidebar-iconnav" class="uk-iconnav uk-iconnav-vertical">
+  <li><a href="#" id="ehb-sidebar-expand" class="mdi mdi-24px mdi-arrow-right"></a></li>
+  {{#each config.navigation}}
+  <li>
+    <a href="#" class="mdi mdi-24px mdi-{{icon}}"></a>
+    {{#if children}}
+    <ul class="uk-nav uk-dropdown-nav" uk-dropdown="pos:left-top">
+      {{#each children}}
+      <li>
+        <a href="{{path}}" class="mdi mdi-18px mdi-{{icon}}">{{title}}</a>
+        {{#if children}}
+        <ul class="uk-nav-sub">
+          {{#each children}}
+          <li><a href="#" class="mdi mdi-18px mdi-{{icon}}">{{title}}</a></li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+    {{/if}}
+  </li>
+  {{/each}}
+</ul>

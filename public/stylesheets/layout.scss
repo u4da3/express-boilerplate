@@ -1,0 +1,185 @@
+@import "../../node_modules/uikit/src/scss/variables-theme";
+
+$ehb-header-height: 40px;
+$ehb-sidebar-min-width: 40px;
+$ehb-sidebar-max-width: 200px;
+$ehb-sidebar-margin-left-right: 6px;
+$ehb-footer-height: 16px;
+
+@mixin all {
+  @media all {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (min-width: 0px) and (max-width: $breakpoint-xsmall-max) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: $breakpoint-small) {
+    @content;
+  }
+}
+:root{
+  --ehb-sidebar-min-width: #{$ehb-sidebar-min-width};
+  --ehb-sidebar-max-width: #{$ehb-sidebar-max-width};
+}
+body{
+  position: relative;
+}
+
+.header {
+  @include mobile {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: $ehb-header-height;
+    padding-left: 6px;
+    padding-right: 6px;
+    z-index: 2;
+  };
+  @include desktop {
+    background: #000000;
+    color: #FFFFFF;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: $ehb-header-height;
+    padding-left: 6px;
+    padding-right: 6px;
+    z-index: 2;
+  };
+  .ehb-title {
+    background: #000000;
+    color: #FFFFFF;
+    display: inline;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 8px 4px 10px 4px;
+  }
+}
+.sidebar {
+  @include mobile {
+    background: #DDDDDD;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 0px;
+    overflow: hidden;
+    z-index: 1;
+  };
+  @include desktop {
+    background: #DDDDDD;
+    position: fixed;
+    left: 0;
+    top: $ehb-header-height;
+    bottom: $ehb-footer-height;
+    width: $ehb-sidebar-max-width;
+    overflow: visible;
+    padding: 0 $ehb-sidebar-margin-left-right;
+    z-index: 1;
+  };
+  #ehb-sidebar-accordion {
+    width: $ehb-sidebar-max-width - 2 * $ehb-sidebar-margin-left-right;
+  }
+  #ehb-sidebar-iconnav {
+    width: $ehb-sidebar-min-width - 2 * $ehb-sidebar-margin-left-right;
+  }
+  #ehb-sidebar-accordion,
+  #ehb-sidebar-iconnav {
+    margin: 0;
+    >li {
+      padding: 0;
+      >a {
+        height: 36px;
+        line-height: 24px;
+        padding: 6px 0;
+        font-size: 18px;
+        vertical-align: baseline;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.main {
+  @include all {
+    display: flex;
+    overflow: auto;
+    z-index: 0;
+  }
+  @include mobile {
+    margin: $ehb-header-height 0 0 0;
+  };
+  @include desktop {
+    margin: $ehb-header-height 0 $ehb-footer-height 0;
+  };
+  #ehb-spacer {
+    @include mobile {
+      width: 0;
+    };
+    @include desktop {
+      width: $ehb-sidebar-max-width;
+    };
+  }
+  #ehb-container {
+    flex: 1;
+  }
+}
+.footer {
+  @include mobile {
+    background: #ffffff;
+    color: #999999;
+    position: relative;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: $ehb-footer-height;
+    font-size: 12px;
+    text-align: center;
+    z-index: 2;
+  };
+  @include desktop {
+    background: #000000;
+    color: #FFFFFF;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: $ehb-footer-height;
+    font-size: 12px;
+    text-align: center;
+    z-index: 2;
+  };
+}
+/* Material Design Icons */
+.mdi-18px::before {
+  line-height: 18px;
+  width: 18px;
+}
+.mdi-24px::before {
+  line-height: 24px;
+  width: 24px;
+}
+.mdi-36px::before {
+  line-height: 36px;
+  width: 36px;
+}
+.mdi-48px::before {
+  line-height: 48px;
+  width: 48px;
+}
+/* template (delete)*/
+.box {
+  @include mobile {
+    background-color: red;
+  };
+  @include desktop {
+    background-color: blue;
+  };
+}

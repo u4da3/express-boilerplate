@@ -1,0 +1,14 @@
+<div class="uk-grid-small uk-flex-middle" uk-grid>
+  <div class="uk-width-auto">
+    <img class="uk-border-circle" width="48" height="48" src="/images/account-gray.svg">
+  </div>
+  <div class="uk-width-expand">
+      <p class="uk-margin-remove-bottom">{{default account.name "Guest"}}</p>
+      <p class="uk-margin-remove-top">
+        <button id="ehb-logout" class="uk-button uk-button-default uk-button-small"
+          uk-toggle="target: #ehb-modal-logout">
+          {{#i18n "label.system.logout"}}{{/i18n}}
+        </button>
+      </p>
+  </div>
+</div>

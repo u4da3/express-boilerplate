@@ -1,0 +1,163 @@
+:root {
+  --ehb-sidebar-min-width: 40px;
+  --ehb-sidebar-max-width: 200px; }
+
+body {
+  position: relative; }
+
+@media (min-width: 0px) and (max-width: 639px) {
+  .header {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 40px;
+    padding-left: 6px;
+    padding-right: 6px;
+    z-index: 2; } }
+
+@media (min-width: 640px) {
+  .header {
+    background: #000000;
+    color: #FFFFFF;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    height: 40px;
+    padding-left: 6px;
+    padding-right: 6px;
+    z-index: 2; } }
+
+.header .ehb-title {
+  background: #000000;
+  color: #FFFFFF;
+  display: inline;
+  font-size: 22px;
+  line-height: 22px;
+  margin: 8px 4px 10px 4px; }
+
+@media (min-width: 0px) and (max-width: 639px) {
+  .sidebar {
+    background: #DDDDDD;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 0px;
+    overflow: hidden;
+    z-index: 1; } }
+
+@media (min-width: 640px) {
+  .sidebar {
+    background: #DDDDDD;
+    position: fixed;
+    left: 0;
+    top: 40px;
+    bottom: 16px;
+    width: 200px;
+    overflow: visible;
+    padding: 0 6px;
+    z-index: 1; } }
+
+.sidebar #ehb-sidebar-accordion {
+  width: 188px; }
+
+.sidebar #ehb-sidebar-iconnav {
+  width: 28px; }
+
+.sidebar #ehb-sidebar-accordion,
+.sidebar #ehb-sidebar-iconnav {
+  margin: 0; }
+  .sidebar #ehb-sidebar-accordion > li,
+  .sidebar #ehb-sidebar-iconnav > li {
+    padding: 0; }
+    .sidebar #ehb-sidebar-accordion > li > a,
+    .sidebar #ehb-sidebar-iconnav > li > a {
+      height: 36px;
+      line-height: 24px;
+      padding: 6px 0;
+      font-size: 18px;
+      vertical-align: baseline; }
+    .sidebar #ehb-sidebar-accordion > li a:hover,
+    .sidebar #ehb-sidebar-iconnav > li a:hover {
+      text-decoration: none; }
+
+@media all {
+  .main {
+    display: flex;
+    overflow: auto;
+    z-index: 0; } }
+
+@media (min-width: 0px) and (max-width: 639px) {
+  .main {
+    margin: 40px 0 0 0; } }
+
+@media (min-width: 640px) {
+  .main {
+    margin: 40px 0 16px 0; } }
+
+@media (min-width: 0px) and (max-width: 639px) {
+  .main #ehb-spacer {
+    width: 0; } }
+
+@media (min-width: 640px) {
+  .main #ehb-spacer {
+    width: 200px; } }
+
+.main #ehb-container {
+  flex: 1; }
+
+@media (min-width: 0px) and (max-width: 639px) {
+  .footer {
+    background: #ffffff;
+    color: #999999;
+    position: relative;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 16px;
+    font-size: 12px;
+    text-align: center;
+    z-index: 2; } }
+
+@media (min-width: 640px) {
+  .footer {
+    background: #000000;
+    color: #FFFFFF;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 16px;
+    font-size: 12px;
+    text-align: center;
+    z-index: 2; } }
+
+/* Material Design Icons */
+.mdi-18px::before {
+  line-height: 18px;
+  width: 18px; }
+
+.mdi-24px::before {
+  line-height: 24px;
+  width: 24px; }
+
+.mdi-36px::before {
+  line-height: 36px;
+  width: 36px; }
+
+.mdi-48px::before {
+  line-height: 48px;
+  width: 48px; }
+
+/* template (delete)*/
+@media (min-width: 0px) and (max-width: 639px) {
+  .box {
+    background-color: red; } }
+
+@media (min-width: 640px) {
+  .box {
+    background-color: blue; } }
+
+/*# sourceMappingURL=layout.css.map */

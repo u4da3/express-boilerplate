@@ -1,0 +1,40 @@
+<ul id="ehb-sidebar-accordion" class="uk-nav-default uk-nav-parent-icon" uk-nav>
+  <li class="">
+    <a href="#" id="ehb-sidebar-fold" class="mdi mdi-24px mdi-arrow-left"></a>
+  </li>
+  {{#each config.navigation}}
+  {{#unless children}}
+  <li class="uk-padding-remove">
+    <a href="#" class="mdi mdi-24px mdi-{{icon}}">
+      {{#if i18n}}{{#i18n title}}{{/i18n}}{{^}}{{title}}{{/if}}
+    </a>
+  </li>
+  {{^}}
+  <li class="uk-parent uk-padding-remove">
+    <a href="#" class="mdi mdi-24px mdi-{{icon}}">
+      {{#if i18n}}{{#i18n title}}{{/i18n}}{{^}}{{title}}{{/if}}
+    </a>
+    <ul class="uk-nav-sub">
+      {{#each children}}
+      <li>
+        <a href="#" class="mdi mdi-24px mdi-{{icon}}">
+          {{#if i18n}}{{#i18n title}}{{/i18n}}{{^}}{{title}}{{/if}}
+        </a>
+        {{#if children}}
+        <ul>
+          {{#each children}}
+          <li>
+            <a href="#" class="mdi mdi-24px mdi-{{icon}}">
+              {{#if i18n}}{{#i18n title}}{{/i18n}}{{^}}{{title}}{{/if}}
+            </a>
+          </li>
+          {{/each}}
+        </ul>
+        {{/if}}
+      </li>
+      {{/each}}
+    </ul>
+  </li>
+  {{/unless}}
+  {{/each}}
+</ul>

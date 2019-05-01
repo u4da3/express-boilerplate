@@ -1,0 +1,40 @@
+navigation:
+  - name: home
+    path: /
+    icon: home
+    title: Home
+    description: Home Page
+  - name: account
+    path: /account
+    type: parent
+    icon: account
+    title: Account
+    children:
+      - title: Sub Item 1
+        children:
+          - title: Sub Item 2
+  - name: clover
+    type: parent
+    icon: clover
+    title: Clover
+    children:
+      - name: red
+        path: /clover/red
+        icon: fire
+        title: Sub Item 1
+        description: Sub Item 1
+      - name: green
+        path: /clover/green
+        icon: leaf
+        title: Sub Item 2
+        description: Sub Item 2
+      - name: blue
+        path: /clover/blue
+        icon: water
+        title: Sub Item 3
+        description: Sub Item 3
+      - name: yellow
+        path: /clover/yellow
+        icon: flash
+        title: Sub Item 4
+        description: Sub Item 4

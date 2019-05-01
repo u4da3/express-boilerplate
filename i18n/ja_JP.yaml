@@ -1,0 +1,11 @@
+label:
+  system:
+    cancel: Cancel
+    confirm: Confirm
+    copyright: Copyritght {{example}} All Rights Reserved
+    logout: Logout
+    ok: OK
+    title: Express Handlebars Boilerplate
+message:
+  confirm:
+    logout: ログアウトしてよろいいですか。

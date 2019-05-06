@@ -1,0 +1,18 @@
+@import "../../node_modules/uikit/src/scss/variables-theme";
+@import "variables";
+
+@mixin all {
+  @media all {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (min-width: 0px) and (max-width: $breakpoint-xsmall-max) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: $breakpoint-small) {
+    @content;
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "sidebar-accordion.css",
+	"sources": [
+		"sidebar-accordion.scss",
+		"_variables.scss",
+		"_mixin.scss",
+		"../../node_modules/uikit/src/scss/variables-theme.scss"
+	],
+	"names": [],
+	"mappings": "AEcE,MAAM,EAAE,SAAS,EAAE,KAAK;EFX1B,AAAA,QAAQ,CAAC;IAEL,KAAK,ECHe,KAAK,GDK5B;;AEOC,MAAM,EAAE,SAAS,EAAE,KAAK;EFL1B,AACE,KADG,CACH,WAAW,CAAC;IAER,KAAK,ECVa,KAAK,GDY1B"
+}

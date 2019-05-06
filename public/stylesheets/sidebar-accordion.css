@@ -1,0 +1,9 @@
+@media (min-width: 640px) {
+  .sidebar {
+    width: 200px; } }
+
+@media (min-width: 640px) {
+  .main #ehb-spacer {
+    width: 200px; } }
+
+/*# sourceMappingURL=sidebar-accordion.css.map */

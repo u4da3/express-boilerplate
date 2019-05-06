@@ -1,4 +1,5 @@
-<ul id="ehb-sidebar-iconnav" class="uk-iconnav uk-iconnav-vertical">
+<ul id="ehb-sidebar-iconnav" class="uk-iconnav uk-iconnav-vertical
+  {{#unless sidebar.iconnav}}uk-hidden{{/unless}}">
   <li><a href="#" id="ehb-sidebar-expand" class="mdi mdi-24px mdi-arrow-right"></a></li>
   {{#each config.navigation}}
   <li>

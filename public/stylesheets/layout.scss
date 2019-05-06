@@ -1,26 +1,7 @@
 @import "../../node_modules/uikit/src/scss/variables-theme";
+@import "variables";
+@import "mixin";
 
-$ehb-header-height: 40px;
-$ehb-sidebar-min-width: 40px;
-$ehb-sidebar-max-width: 200px;
-$ehb-sidebar-margin-left-right: 6px;
-$ehb-footer-height: 16px;
-
-@mixin all {
-  @media all {
-    @content;
-  }
-}
-@mixin mobile {
-  @media (min-width: 0px) and (max-width: $breakpoint-xsmall-max) {
-    @content;
-  }
-}
-@mixin desktop {
-  @media (min-width: $breakpoint-small) {
-    @content;
-  }
-}
 :root{
   --ehb-sidebar-min-width: #{$ehb-sidebar-min-width};
   --ehb-sidebar-max-width: #{$ehb-sidebar-max-width};
@@ -30,6 +11,7 @@ body{
 }
 
 .header {
+  #ehb-header-desktop {
   @include mobile {
     position: fixed;
     left: 0px;
@@ -56,10 +38,11 @@ body{
     background: #000000;
     color: #FFFFFF;
     display: inline;
-    font-size: 22px;
-    line-height: 22px;
-    margin: 8px 4px 10px 4px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 10px 4px 10px 4px;
   }
+}
 }
 .sidebar {
   @include mobile {
@@ -114,7 +97,7 @@ body{
     z-index: 0;
   }
   @include mobile {
-    margin: $ehb-header-height 0 0 0;
+    margin: 0 0 0 0;
   };
   @include desktop {
     margin: $ehb-header-height 0 $ehb-footer-height 0;
@@ -173,13 +156,4 @@ body{
 .mdi-48px::before {
   line-height: 48px;
   width: 48px;
-}
-/* template (delete)*/
-.box {
-  @include mobile {
-    background-color: red;
-  };
-  @include desktop {
-    background-color: blue;
-  };
 }

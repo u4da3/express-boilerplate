@@ -6,7 +6,7 @@ body {
   position: relative; }
 
 @media (min-width: 0px) and (max-width: 639px) {
-  .header {
+  .header #ehb-header-desktop {
     position: fixed;
     left: 0px;
     right: 0px;
@@ -17,7 +17,7 @@ body {
     z-index: 2; } }
 
 @media (min-width: 640px) {
-  .header {
+  .header #ehb-header-desktop {
     background: #000000;
     color: #FFFFFF;
     position: fixed;
@@ -29,13 +29,13 @@ body {
     padding-right: 6px;
     z-index: 2; } }
 
-.header .ehb-title {
+.header #ehb-header-desktop .ehb-title {
   background: #000000;
   color: #FFFFFF;
   display: inline;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 8px 4px 10px 4px; }
+  font-size: 20px;
+  line-height: 20px;
+  margin: 10px 4px 10px 4px; }
 
 @media (min-width: 0px) and (max-width: 639px) {
   .sidebar {
@@ -91,7 +91,7 @@ body {
 
 @media (min-width: 0px) and (max-width: 639px) {
   .main {
-    margin: 40px 0 0 0; } }
+    margin: 0 0 0 0; } }
 
 @media (min-width: 640px) {
   .main {
@@ -150,14 +150,5 @@ body {
 .mdi-48px::before {
   line-height: 48px;
   width: 48px; }
-
-/* template (delete)*/
-@media (min-width: 0px) and (max-width: 639px) {
-  .box {
-    background-color: red; } }
-
-@media (min-width: 640px) {
-  .box {
-    background-color: blue; } }
 
 /*# sourceMappingURL=layout.css.map */

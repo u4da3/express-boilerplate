@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixin";
+
+.sidebar {
+  @include desktop {
+    width: $ehb-sidebar-max-width;
+  };
+}
+
+.main {
+  #ehb-spacer {
+    @include desktop {
+      width: $ehb-sidebar-max-width;
+    };
+  }
+}

@@ -15,6 +15,7 @@ var { auth, requiresAuth } = require('express-openid-connect');
 /* Middlewares */
 var i18nMiddleware = require('./middlewares/i18n')
 var configMiddleware = require('./middlewares/config')
+var layoutMiddleware = require('./middlewares/layout')
 /* Routers */
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -25,9 +26,10 @@ app.use(helmet());
 
 // use session controll
 app.use(session({
+  name : 'EHBSID',
   secret: 'keyboard cat',
   resave: false,
-  saveUninitialized: false,
+  saveUninitialized: true,
   cookie: {
     maxAge: 30 * 60 * 1000
   }
@@ -65,11 +67,12 @@ app.use(sassMiddleware({
 }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(configMiddleware(app))
-app.use(i18nMiddleware(app))
-
 app.use('/assets', assetsRouter);
 
+//middlewares
+app.use(configMiddleware(app))
+app.use(i18nMiddleware(app))
+app.use(layoutMiddleware())
 //app.use(auth());
 
 app.use('/', indexRouter);

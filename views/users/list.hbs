@@ -1,0 +1,28 @@
+<div>
+  <div class="uk-section">
+    <table class="uk-table uk-table-small uk-table-striped uk-table-hover">
+      <thead>
+        <tr>
+          <th>User Name</th>
+          <th>Nickname</th>
+          <th>E-Mail</th>
+          <th>Roles</th>
+          <th>Groups</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each data.usersList}}
+        <tr>
+          <td>{{username}}</td>
+          <td>{{nickname}}</td>
+          <td>{{email}}</td>
+          <td>{{join roles " "}}</td>
+          <td>{{join groups " "}}</td>
+          <td><span></span></td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>

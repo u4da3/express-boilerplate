@@ -1,0 +1,33 @@
+<div class="uk-section">
+  <div class="uk-container uk-width-1-2">
+    <div class="uk-card uk-card-default uk-card-body">
+      <form action="/account/signup" method="post">
+        {{#each data.errors}}
+          <div class="uk-alert uk-alert-danger" uk-alert>
+            <a class="uk-alert-close" uk-close></a>
+            <p>{{msg}}</p>
+          </div>
+        {{/each}}
+        <div>
+          <label>Username:</label>
+          <input type="text" name="username" class="uk-input" inputmode="verbatim"/>
+        </div>
+        <div>
+          <label>Password:</label>
+          <input type="password" name="password" class="uk-input"/>
+        </div>
+        <div>
+          <label>Password Confirm:</label>
+          <input type="password" name="confirm" class="uk-input"/>
+        </div>
+        <div>
+          <label>E-Mail:</label>
+          <input type="text" name="email" class="uk-input"/>
+        </div>
+        <div>
+          <input type="submit" value="Sign Up!!" class="uk-button uk-button-primary"/>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

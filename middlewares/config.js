@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 const each = require('async/each');
+const debug = require('debug')('ehb');
 
 module.exports = (app) => {
   let config = {};
@@ -26,9 +27,9 @@ module.exports = (app) => {
     .forEach(function(file) {
       fileList.push(file);
     });
-  console.log(fileList);
 
   each(fileList, function(file, callback) {
+    debug('loading config ' + file + ' ...');
     _.merge(config, yaml.safeLoad(fs.readFileSync(file)));
     callback();
   });

@@ -1,4 +1,5 @@
 const _ = require('lodash');
+const debug = require('debug')('ehb');
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
@@ -26,9 +27,9 @@ module.exports = (app) => {
     .forEach(function(file) {
       fileList.push(file);
     });
-  console.log(fileList);
 
   each(fileList, function(file, callback) {
+    debug('loading config ' + file + ' ...');
     let key = path.basename(file).split('.')[0];
     let val = yaml.safeLoad(fs.readFileSync(file));
     if (key && val) i18n[key] = val;
@@ -37,6 +38,7 @@ module.exports = (app) => {
   _.merge(app.locals, i18n);
 
   return (req, res, next) => {
+    // TODO
     console.log(req.headers['accept-language']);
     app.locals.language = 'ja_JP';
     next();
